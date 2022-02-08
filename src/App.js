@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import React, { useState } from 'react';
@@ -18,7 +17,6 @@ function App() {
   }
 
   var callAPI = ()=>{
-    alert('sss')
     const inp = document.getElementById('UpFile')
     const formData = new FormData()
     if(inp.files[0]==null){
@@ -32,7 +30,8 @@ function App() {
     var requestOptions = {
         method: 'POST',
         body: formData,
-        headers: myHeaders
+        headers: myHeaders,
+        mode: 'no-cors'
     };
     // make API call with parameters and use promises to get response
     fetch("https://uxver7s3oa.execute-api.ap-northeast-1.amazonaws.com/dev", requestOptions);
