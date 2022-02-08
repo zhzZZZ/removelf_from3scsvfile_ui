@@ -28,6 +28,7 @@ function App() {
     var myHeaders = new Headers();
     myHeaders.append("Content-type", "multipart/form-data");
     var requestOptions = {
+        limits:{fileSize: '1gb'},
         method: 'POST',
         body: formData,
         headers: myHeaders,
